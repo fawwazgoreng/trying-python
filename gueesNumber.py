@@ -1,14 +1,14 @@
 import random
+import sys
 
 def ask_confirm(msg = "are you sure?"):
     print(msg)
     print("please input yes or no")
     answer = input("")
     if answer.lower() == "yes" or answer.lower() == "y":
-        main()
-        return True
+        return main()
     else :
-        return False
+        sys.exit()
 
 def main () :
     print("Hi! lest go playing guess a number")
@@ -30,5 +30,6 @@ def main () :
             change = change - 1
             print(f"your number to low your change is {change}")
     print(f"right number is {number}")
-main()
-ask_confirm("want to play again")
+while True:
+    main()
+    ask_confirm("want to play again")
