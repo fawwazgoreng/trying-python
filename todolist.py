@@ -4,7 +4,7 @@ import json
 class TodolistAction:
     todolist = []
     def __init__(self):
-        with open("todolist.json") as file:
+        with open("json/todolist.json") as file:
             initial = json.load(file)
         self.todolist = initial
     pass
@@ -12,15 +12,15 @@ class TodolistAction:
         return self.todolist
     def add(self , todo):
         self.todolist.append(todo)
-        with open("todolist.json" , 'w') as f:
+        with open("json/todolist.json", 'w') as f:
             json.dump(self.todolist , f , indent=4)
     def remove(self , todo):
         self.todolist.remove(todo)
-        with open("todolist.json" , 'w') as f:
+        with open("json/todolist.json", 'w') as f:
             json.dump(self.todolist , f , indent=4)
     def edit(self , i ,todo):
         self.todolist[i] = todo
-        with open("todolist.json" , 'w') as f:
+        with open("json/todolist.json", 'w') as f:
             json.dump(self.todolist , f , indent=4)
 
 # todolist class
