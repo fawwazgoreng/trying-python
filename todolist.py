@@ -1,5 +1,4 @@
 import json
-
 # initiate class todolist
 class TodolistAction:
     todolist = []
@@ -57,6 +56,7 @@ def todolist ():
     print("prees 2 to add all todolist")
     print("prees 3 to edit all todolist")
     print("prees 4 to delete all todolist")
+    
 todolist()
 while True:
     ask_method()
